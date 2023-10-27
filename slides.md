@@ -145,7 +145,7 @@ $ kill -15 1234
 
 ```
 
-- `SIGKILL` o 9 : muori subito
+- `SIGKILL` / 9 : muori subito
 
 ---
 
@@ -182,7 +182,7 @@ while True:
 - Per vederli:
 
 ```bash
-ps ax | grep ZN+
+ps aux | grep ZN+
  5113 pts/0    Z+     0:00 [python] <defunct>
 
 # contarli con:
