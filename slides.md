@@ -61,7 +61,7 @@ Linux day 2023
 - l'HW esegue un software (BIOS) che verifica l'hw
 - il BIOS fa partire da un dispositivo di boot (disco, usb, rete) un bootloader
 - il bootloader carica il kernel in memoria (da `/boot/vmlinuz`) e lo esegue
-- Il kernel, una volta caricato, `/sbin/init` e lo esegue con pid 1
+- Il kernel, una volta caricato, lancia `/sbin/init` e lo esegue con pid 1
 
 ```bash
 $ ps -aux | grep /sbin/init
@@ -138,6 +138,7 @@ else:
 
 - Nonostante il nome, kill e’ semplicemente il comando che manda segnali ai processi (di solito “termina”).- `SIGTERM` o 15 e’ il segnale di default. 
 - Significa “termina” ma puoi effettuare delle operazioni di cleanup (rilasciare risorse).
+- Un altro segnale comune e' `SIGHUP` (mandato al processo quando il terminale e' chiuso)
 
 
 ```bash
